@@ -13,15 +13,12 @@ func main() {
 	for i := 0; i <= 100; i++ {
 		multiploDe3 := i%3 == 0
 		multiploDe5 := i%5 == 0
-		
+
 		if multiploDe3 {
 			fmt.Printf("PIN\n")
-		}
-		if multiploDe5 {
+		} else if multiploDe5 {
 			fmt.Printf("PAN\n")
-		}
-
-		if !(multiploDe3 && multiploDe5){
+		} else {
 			fmt.Println(i)
 		}
 
