@@ -3,8 +3,27 @@ package main
 import "fmt"
 
 func main() {
-	const pontoEbulicaoKelvin = 373.15;
-	const pontoEbulicaoCelcius = (pontoEbulicaoKelvin - 273.15)
+	for i := 0; i <= 100; i++ {
+		if i%3 == 0 {
+			fmt.Printf("O numero %d é divisivel por 3\n", i)
+		}
+	}
 
-	fmt.Printf("A temperatura de ebulição da água em °K = %v (%T), temperatura de ebulição da água em °C =%v (%T) .", pontoEbulicaoKelvin, pontoEbulicaoKelvin, pontoEbulicaoCelcius, pontoEbulicaoCelcius)
+	// Parte 2
+	for i := 0; i <= 100; i++ {
+		multiploDe3 := i%3 == 0
+		multiploDe5 := i%5 == 0
+		
+		if multiploDe3 {
+			fmt.Printf("PIN\n")
+		}
+		if multiploDe5 {
+			fmt.Printf("PAN\n")
+		}
+
+		if !(multiploDe3 && multiploDe5){
+			fmt.Println(i)
+		}
+
+	}
 }
